@@ -128,7 +128,7 @@ button1.addEventListener('click', () => {
     const resultImage = new Image();
     resultImage.id='check';
 
-    axios.post('http://alphabetical.pythonanywhere.com/predict', formData) // استبدل عنوان URL بعنوان الخادم الصحيح
+    axios.post('https://alphabetical.pythonanywhere.com/predict', formData) // استبدل عنوان URL بعنوان الخادم الصحيح
       .then((response) => {
         if(response.data['The predicted character is ']===type)
         {
@@ -250,7 +250,7 @@ button2.addEventListener('click', () => {
     formData.append('type', type);
     const resultImage = new Image();
     resultImage.id='check1';
-    axios.post('http://alphabetical.pythonanywhere.com/predict', formData) // استبدل عنوان URL بعنوان الخادم الصحيح
+    axios.post('https://alphabetical.pythonanywhere.com/predict', formData) // استبدل عنوان URL بعنوان الخادم الصحيح
       .then((response) => {
         if(response.data['The predicted character is ']===type)
         {
@@ -427,7 +427,7 @@ button1.addEventListener('click', () => {
     const resultImage = new Image();
     resultImage.id='check';
 
-    axios.post('http://alphabetical.pythonanywhere.com/predict', formData) // استبدل عنوان URL بعنوان الخادم الصحيح
+    axios.post('https://alphabetical.pythonanywhere.com/predict', formData) // استبدل عنوان URL بعنوان الخادم الصحيح
       .then((response) => {
         if(response.data['The predicted character is ']===type)
         {
@@ -549,7 +549,7 @@ button2.addEventListener('click', () => {
     formData.append('type', type);
     const resultImage = new Image();
     resultImage.id='check1';
-    axios.post('http://alphabetical.pythonanywhere.com/predict', formData) // استبدل عنوان URL بعنوان الخادم الصحيح
+    axios.post('https://alphabetical.pythonanywhere.com/predict', formData) // استبدل عنوان URL بعنوان الخادم الصحيح
       .then((response) => {
         if(response.data['The predicted character is ']===type)
         {
