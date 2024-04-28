@@ -1,0 +1,299 @@
+@font-face {
+    font-family: "myFont";
+    src: url("Font/myFont.otf");
+  }
+body {
+    direction: ltr;
+    /* direction: rtl; */
+    font-family: "Amiri", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: blue;
+    margin: 0;
+}
+h2 {
+    color: blue;
+    margin: 0;
+}
+
+
+.button {
+    background-color: #2196F3;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    justify-self: center;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.bot {
+    position: absolute;
+    top: 125%;
+    left: 50%;
+}
+
+
+#main-page, #start-page, .head {
+    font-family: "Aref Ruqaa", serif;
+}
+
+#main-page, #start-page, #showLetters,#write-letters-page, #listen-letters-page, #numbers-page, #letters-page {
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 70vw;
+}
+
+#start-page, #showLetters, #write-letters-page, #listen-letters-page, #numbers-page, #write-letters-page-1, #write-letters-page-2 {
+display: none;
+}
+#main-page, #start-page, #showLetters, #write-letters-page, #listen-letters-page {
+    display: grid;
+    place-items: center;
+    margin: 0;
+}
+#start-page, #letters-page, #write-letters-page, #listen-letters-page, #numbers-page, #write-numbers-page, #listen-numbers-page {
+    display: none;
+    }
+
+#start-page, #letters-page {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #ef8943;
+    font-weight: bold;
+}
+
+#showLetters ul, #write-letters-page ul, #listen-letters-page ul, #listen-numbers-page ul, #write-numbers-page ul {
+list-style: none;
+padding: 0;
+
+width: 100%;
+display: grid;
+grid-template-columns: repeat(10, minmax(50px, auto));
+justify-content: center;
+align-items: center;
+
+}
+
+#showLetters ul li, #write-letters-page ul li, #letters-page ul li, #listen-letters-page ul li, #numbers-page ul li, #listen-numbers-page ul li, #write-numbers-page ul li {
+height: 1.2em;
+padding: 10px 15px;
+margin: 5px 0;
+border: 1px solid #433333;
+cursor: pointer;
+font-size: 1.9em;
+width: 16vw;
+height: 6vh;
+}
+
+
+
+
+.letter-container, .number-container {
+    /* background-color: #fbb12f;
+    height: 100vh;
+    width: 100vw; */
+    /* display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: .9em .9em;
+    justify-content: space-evenly; */
+    width: 70vw;
+    height: 50vh;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    /* justify-content: center; */
+    align-items: center;
+    align-content: center;
+    /* background-color: #2298c5; */
+    color: #1c07f2;
+}
+
+/* #write-letters-page ul {
+    background-color: #2298c5;
+    color: #fff;
+} */
+.star{
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset, 0 10px 10px rgba(0, 0, 0, 0.5);
+    /* display: grid; */
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: start;
+    justify-content: center;
+    height: 0;
+    width: 0;
+    /* border-bottom: 60px solid #d38434;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent; */
+    position: relative;
+    gap: 50px 100px;
+
+    /* top: 50%;
+    left: 50%; */
+    width: 8vw;
+    height: 10vh;
+    cursor: pointer;
+    /* border: 7px solid blue; */
+    font-size: 1.2em;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    background-color: rgb(250, 80, 178);
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        100% 35%,
+        68% 57%,
+        79% 100%,
+        50% 70%,
+        21% 100%,
+        32% 57%,
+        0% 35%,
+        39% 35%
+    );
+
+}
+
+
+.star1 {
+    position: absolute;
+    top: 102%;
+    left: 80%;
+}
+
+
+
+
+
+#canvas {
+    display: none;
+}
+/* #canvasTwo {
+    direction:"ltr";
+    background-color: #ccc;
+    border: 1px solid black;
+    opacity: 1;
+
+} */
+/* #canvast {
+    display: block;
+    direction:"ltr";
+    background-color: #ccc;
+    border: 1px solid black;
+    opacity: 1;
+
+} */
+
+
+
+/* .star:before {
+    display: grid;
+    text-align: center;
+    align-items: start;
+    justify-content: center;
+    position: absolute;
+    content: " ";
+    height: 0;
+    width: 0;
+    border-top: 60px solid #d38434;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    top: 16px;
+    left: -33px;  
+} */
+
+.letter, .number {
+    position: absolute;
+    justify-self: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+#listen-letters-page {
+   width: 2.4em;
+}
+
+
+#showLetters ul li:hover, #letters-page ul li:hover, #write-letters-page ul li:hover, #listen-letters-page ul li:hover, #numbers-page ul li:hover,#write-numbers-page ul li:hover, #listen-numbers-page ul li:hover { 
+background-color: #f2abab;
+}
+
+#letters-page ul li, #numbers-page ul li, #listen-numbers-page ul, #write-numbers-page ul, #listen-letters-page ul {
+    /* display: grid; */
+    background-color: #1a90f5;
+    color: #fff;
+    justify-content: space-between;
+}
+#numbers-page ul, #letters-page ul {
+    list-style-type: none;
+}
+.container {
+    display: grid;
+    grid-auto-rows: minmax(200px , auto);
+    grid-template-areas: 
+    "head head head head head"
+    "cont cont cont cont cont"
+    "cont cont cont cont cont"
+    "cont cont cont cont cont"
+    "cont cont cont cont cont"
+    "foot foot foot foot foot";
+    row-gap: 10px;
+}
+
+
+.box {
+    background-color: darkcyan;
+    text-align: center;
+    color: black;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.head {
+    grid-area: head;
+    font-size: 2.2em;
+    height: 200px;
+    justify-content: center;
+    background-color: #2196F3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+} 
+
+.content {
+    grid-area: cont;
+    background-image: url("../pictures/backgroundimage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120vh;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: foot;
+    height: 33vh;
+    background-color: darkcyan;
+    text-align: center;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+} 

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هيا نتعلم</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+
+    <div class="container">
+
+        <div class="box head">هيا نتعلم</div>
+        <div class="box content">
+            <div id="main-page">
+                <h1> هيا نتعلم</h1>
+                <button onclick="openStartPage()", class="button">اِبدأ</button>
+
+            </div>
+            
+            <div id="start-page" >
+                <h2>اختر ما تريد تعلمه:</h2>
+                <ul>
+                        <li onclick="showLetters()">الحروف</li>
+                        <li onclick="showNumbers()">الأرقام</li>
+                </ul>
+                <button onclick="closeStartPage()", class="button">رجوع</button>
+            </div>
+            <div id="letters-page" >
+                <ul>
+                    <li onclick="showWriteLetters()">هيا نتدرب</li>
+                    <li onclick="showListenLetters()">هيا نستمع</li>
+                </ul>
+                <button onclick="closeLettersPage()", class="button">رجوع</button> 
+            </div>
+            <div id="write-letters-page">
+                <h2>هيا نتدرب</h2>
+                <div class="letter-container">
+                    <div class="star" style="background-color: rgb(234, 56, 40);">
+                        <div class="letter" onclick="showWriteLetters1()" >أ</div>
+                    </div>
+                    <div class="star" style="background-color: rgb(90, 255, 255);"><div class="letter" onclick="showWriteLetters2()">ب</div></div>
+                    <div class="star" style="background-color: rgb(0, 255, 60);"><div class="letter">ت</div></div>
+                    <div class="star" style="background-color: rgb(255, 213, 0);"><div class="letter">ث</div></div>
+                    <div class="star" style="background-color: rgb(255, 166, 0);"><div class="letter">ث</div></div>
+                    <div class="star" style="background-color: rgb(255, 85, 0);"><div class="letter">ج</div></div>
+                    <div class="star" style="background-color: rgb(89, 0, 255);"><div class="letter">ح</div></div>
+                    <div class="star" style="background-color: rgb(0, 166, 255);"><div class="letter">خ</div></div>
+                    <div class="star" style="background-color: rgb(255, 0, 162);"><div class="letter">د</div></div>
+                    <div class="star" style="background-color: rgb(168, 20, 149);"><div class="letter">ذ</div></div>
+                    <div class="star" style="background-color: rgb(255, 0, 0);"><div class="letter">ر</div></div>
+                    <div class="star" style="background-color: rgb(166, 255, 0);"><div class="letter">ز</div></div>
+                    <div class="star" style="background-color: rgb(0, 255, 13);"><div class="letter">س</div></div>
+                    <div class="star" style="background-color: rgb(255, 183, 0);"><div class="letter">ش</div></div>
+                    <div class="star" style="background-color: rgb(0, 162, 255);"><div class="letter">ص</div></div>
+                    <div class="star" style="background-color: rgb(146, 51, 51);"><div class="letter">ض</div></div>
+                    <div class="star" style="background-color: rgb(251, 0, 255);"><div class="letter">ط</div></div>
+                    <div class="star" style="background-color: rgb(217, 255, 0);"><div class="letter">ظ</div></div>
+                    <div class="star" style="background-color: rgb(0, 247, 255);"><div class="letter">ع</div></div>
+                    <div class="star" style="background-color: rgb(209, 65, 103);"><div class="letter">غ</div></div>
+                    <div class="star" style="background-color: rgb(245, 127, 48);"><div class="letter">ف</div></div>
+                    <div class="star" style="background-color: rgb(63, 93, 230);"><div class="letter">ق</div></div>
+                    <div class="star" style="background-color: rgb(112, 50, 255);"><div class="letter">ك</div></div>
+                    <div class="star" style="background-color: rgb(255, 225, 0);"><div class="letter">ل</div></div>
+                    <div class="star" style="background-color: rgb(255, 125, 38);"><div class="letter">م</div></div>
+                    <div class="star" style="background-color: rgb(49, 251, 46);"><div class="letter">ن</div></div>
+                    <div class="star" style="background-color: rgb(208, 0, 255);"><div class="letter">ه</div></div>
+                    <div class="star" style="background-color: rgb(234, 255, 50);"><div class="letter">و</div></div>
+                    <div class="star" style="background-color: rgb(40, 248, 248);"><div class="letter">ي</div></div>
+                </div>
+
+
+                <button onclick="closeWriteLettersPage()", class="button">رجوع</button>
+            </div>            
+            <div id="special-letter"></div>
+            <div id="listen-letters-page">
+                <h2>هيا نستمع</h2>
+                <div class="letter-container">
+                    <div class="star" style="background-color: rgb(234, 56, 40);">
+                        <div class="letter" >أ</div>
+                    </div>
+                    <div class="star" style="background-color: rgb(90, 255, 255);"><div class="letter">ب</div></div>
+                    <div class="star" style="background-color: rgb(0, 255, 60);"><div class="letter">ت</div></div>
+                    <div class="star" style="background-color: rgb(255, 213, 0);"><div class="letter">ث</div></div>
+                    <div class="star" style="background-color: rgb(255, 166, 0);"><div class="letter">ث</div></div>
+                    <div class="star" style="background-color: rgb(255, 85, 0);"><div class="letter">ج</div></div>
+                    <div class="star" style="background-color: rgb(89, 0, 255);"><div class="letter">ح</div></div>
+                    <div class="star" style="background-color: rgb(0, 166, 255);"><div class="letter">خ</div></div>
+                    <div class="star" style="background-color: rgb(255, 0, 162);"><div class="letter">د</div></div>
+                    <div class="star" style="background-color: rgb(168, 20, 149);"><div class="letter">ذ</div></div>
+                    <div class="star" style="background-color: rgb(255, 0, 0);"><div class="letter">ر</div></div>
+                    <div class="star" style="background-color: rgb(166, 255, 0);"><div class="letter">ز</div></div>
+                    <div class="star" style="background-color: rgb(0, 255, 13);"><div class="letter">س</div></div>
+                    <div class="star" style="background-color: rgb(255, 183, 0);"><div class="letter">ش</div></div>
+                    <div class="star" style="background-color: rgb(0, 162, 255);"><div class="letter">ص</div></div>
+                    <div class="star" style="background-color: rgb(146, 51, 51);"><div class="letter">ض</div></div>
+                    <div class="star" style="background-color: rgb(251, 0, 255);"><div class="letter">ط</div></div>
+                    <div class="star" style="background-color: rgb(217, 255, 0);"><div class="letter">ظ</div></div>
+                    <div class="star" style="background-color: rgb(0, 247, 255);"><div class="letter">ع</div></div>
+                    <div class="star" style="background-color: rgb(209, 65, 103);"><div class="letter">غ</div></div>
+                    <div class="star" style="background-color: rgb(245, 127, 48);"><div class="letter">ف</div></div>
+                    <div class="star" style="background-color: rgb(63, 93, 230);"><div class="letter">ق</div></div>
+                    <div class="star" style="background-color: rgb(112, 50, 255);"><div class="letter">ك</div></div>
+                    <div class="star" style="background-color: rgb(255, 225, 0);"><div class="letter">ل</div></div>
+                    <div class="star" style="background-color: rgb(255, 125, 38);"><div class="letter">م</div></div>
+                    <div class="star" style="background-color: rgb(49, 251, 46);"><div class="letter">ن</div></div>
+                    <div class="star" style="background-color: rgb(208, 0, 255);"><div class="letter">ه</div></div>
+                    <div class="star" style="background-color: rgb(234, 255, 50);"><div class="letter">و</div></div>
+                    <div class="star" style="background-color: rgb(40, 248, 248);"><div class="letter">ي</div></div>
+                </div>
+                <button onclick="closeListenLettersPage()", class="button">رجوع</button>
+            </div>
+
+
+            <div id="write-letters-page-1">
+                <div class="star star1"><div class="letter">أ</div></div>
+            </div>
+            <div id="write-letters-page-2">
+                <div class="star star1"><div class="letter">ب</div></div>
+            </div>
+
+<!-- <div class="arabic-letter">أ</div> -->
+
+
+            <div id="numbers-page" >
+                <ul>
+                    <li onclick="showWriteNumbers()">هيا نتدرب</li>
+                    <li onclick="showListenNumbers()">هيا نستمع</li>
+                </ul>
+                    <button onclick="closeNumbersPage()", class="button">رجوع</button> 
+                </div>
+            
+
+                <div id="write-numbers-page" >
+                <h2 class="head2">تعلم الأرقام العربية</h2>
+                <div class="number-container">
+                <div class="star" style="background-color: rgb(234, 56, 40);"><div class="number">1</div></div>
+                <div class="star" style="background-color: rgb(90, 255, 255);"><div class="number">2</div></div>
+                <div class="star" style="background-color: rgb(0, 255, 60);"><div class="number">3</div></div>
+                <div class="star" style="background-color: rgb(255, 166, 0);"><div class="number">4</div></div>
+                <div class="star" style="background-color: rgb(255, 85, 0);"><div class="number">5</div></div>
+                <div class="star" style="background-color: rgb(89, 0, 255);"><div class="number">6</div></div>
+                <div class="star" style="background-color: rgb(0, 166, 255);"><div class="number">7</div></div>
+                <div class="star" style="background-color: rgb(255, 0, 162);"><div class="number">8</div></div>
+                <div class="star" style="background-color: rgb(168, 20, 149);"><div class="number">9</div></div>
+                <div class="star" style="background-color: rgb(255, 0, 0);"><div class="number">10</div></div>
+                <div class="star" style="background-color: rgb(166, 255, 0);"><div class="number">11</div></div>
+                <div class="star" style="background-color: rgb(0, 255, 13);"><div class="number">12</div></div>
+            </div>
+
+                <button onclick="closeWriteNumbersPage()", class="button">رجوع</button>
+                </div>
+                <div id="listen-numbers-page" >
+                <h2 class="head2">تعلم الأرقام العربية</h2>
+                <div class="number-container">
+                    <div class="star" style="background-color: rgb(234, 56, 40);"><div class="number">1</div></div>
+                    <div class="star" style="background-color: rgb(90, 255, 255);"><div class="number">2</div></div>
+                    <div class="star" style="background-color: rgb(0, 255, 60);"><div class="number">3</div></div>
+                    <div class="star" style="background-color: rgb(255, 166, 0);"><div class="number">4</div></div>
+                    <div class="star" style="background-color: rgb(255, 85, 0);"><div class="number">5</div></div>
+                    <div class="star" style="background-color: rgb(89, 0, 255);"><div class="number">6</div></div>
+                    <div class="star" style="background-color: rgb(0, 166, 255);"><div class="number">7</div></div>
+                    <div class="star" style="background-color: rgb(255, 0, 162);"><div class="number">8</div></div>
+                    <div class="star" style="background-color: rgb(168, 20, 149);"><div class="number">9</div></div>
+                    <div class="star" style="background-color: rgb(255, 0, 0);"><div class="number">10</div></div>
+                    <div class="star" style="background-color: rgb(166, 255, 0);"><div class="number">11</div></div>
+                    <div class="star" style="background-color: rgb(0, 255, 13);"><div class="number">12</div></div>
+                </div>
+
+                <button onclick="closeListenNumbersPage()", class="button">رجوع</button>
+            </div>
+            
+        </div>
+        <div id="write-letters-page-1">
+            <h2>هيا نتدرب</h2>
+            <div id="letter-1-container">
+        </div>
+    </div>
+        <div class="footer"> 2024 &copy;</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
